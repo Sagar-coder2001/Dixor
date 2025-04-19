@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 import logolight from '../../assets/logo.png';
-import logodark from '../../assets/logo 1.png';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { dark, white } from '../../Feature/changetheme';
@@ -54,9 +53,9 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <img
-              src={bgcolor === 'black' ? logodark : logolight }
+              src={logolight}
               alt="Tizzy Logo"
-              className="h-10 transition-all duration-300"
+              className="h-12 transition-all duration-300"
             />
           </div>
 
@@ -138,7 +137,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button onClick={toggleMenu}>
-              <FiMenu className="text-2xl text-gray-700" />
+              <FiMenu  className={`text-2xl ${bgcolor === 'black' ? 'text-white' : 'text-gray-700'}`}/>
             </button>
           </div>
         </div>
@@ -172,12 +171,12 @@ const Navbar = () => {
                 {/* Logo + Close */}
                 <div className="flex justify-between items-center mb-8">
                 <img
-              src={bgcolor === 'black' ? logodark : logolight }
+              src={logolight}
               alt="Tizzy Logo"
               className="h-10 transition-all duration-300"
             />
                   <button onClick={toggleMenu}>
-                    <FiX className="text-3xl text-gray-500 hover:text-red-500 transition duration-300" />
+                    <FiX className={`text-3xl text-gray-500 hover:text-red-500 transition duration-300 ${bgcolor === 'black' ? 'text-white' : 'text-gray-700'}`} />
                   </button>
                 </div>
 

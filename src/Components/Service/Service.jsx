@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
+import mail from '../../assets/Mail Letter.gif'
+import Cloud from '../../assets/Cloud downloading.gif'
+import shield from '../../assets/shield.gif'
 
 export default function ServicesSection() {
     const bgcolor = useSelector((state) => state.theme.value)
@@ -7,19 +10,19 @@ export default function ServicesSection() {
     const txtcolor = useSelector((state) => state.theme.textcolor)
     const services = [
       {
-        title: "Marketing & SEO Optimization",
-        desc: "Content marketing focuses on creating and distributing valuable, relevant content to attract and engage a target audience. SEO, on the other hand, focuses on optimizing a website and its content to improve its visibility in search engine results",
-        icon: "⚙️",
+        title: "Email Send / Receive Speed",
+        desc: "Fastest Outlokk any Email Application Sync Speed",
+        img: mail,
       },
       {
-        title: "Mobile App & Web Development",
-        desc: "Mobile app development focuses on creating software applications for mobile devices (like smartphones and tablets), while web development involves building websites and web applications accessible through web browsers. ",
-        icon: "👤",
+        title: "Backup And Restore",
+        desc: "Automated 30 Days Scheduled Backup on AWS s3 Bucket",
+        img: Cloud,
       },
       {
-        title: "Access to the Latest Technology",
-        desc: " joining professional organizations and attending industry events to utilizing online resources like social media and TED talks",
-        icon: "⚙️",
+        title: "AWS Security Standards",
+        desc: "AWS Foundational Security Best Practices CIS AWS Foundation Benchmark & PCI DSS",
+        img: shield,
       },
     ];
   
@@ -28,12 +31,9 @@ export default function ServicesSection() {
         {/* Header + Button */}
         <div className="flex justify-between items-center mb-12 flex-col lg:flex-row gap-6 lg:gap-0">
           <div className="text-center lg:text-left">
-            <p className="text-xs font-bold uppercase tracking-widest text-gray-500">
+            <p className="text-xs font-bold uppercase tracking-wides">
               Services We Offer
             </p>
-            <h2 className="text-3xl lg:text-5xl font-bold leading-tight mt-2">
-              Turn Information<br />Into Actionable Insights
-            </h2>
           </div>
   
           {/* Animated Button */}
@@ -55,19 +55,19 @@ export default function ServicesSection() {
         </div>
   
         {/* Service Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 text-center">
           {services.map((service, index) => (
             <motion.div
-            // initial={{ opacity: 0, y:20 }}
-            // whileInView={{ opacity: 1, y:0}}
-            // transition={{ duration: 0.6 }}
-            // viewport={{ once: true, amount: 0.5 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1}}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, amount: 0.5 }}
 
               key={index}
               className="relative group border border-gray-300 rounded-xl p-6 text-gray-800 bg-white 
                 lg:transition-all lg:duration-300 lg:hover:scale-105 overflow-hidden"
             >
-              <div className="text-4xl mb-4">{service.icon}</div>
+             <img src={service.img} alt="" className="w-18 mx-auto" />
               <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
   
               {/* Show always on small, show on hover on large */}

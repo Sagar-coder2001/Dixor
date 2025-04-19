@@ -1,12 +1,13 @@
 import { FiArrowRight, FiArrowUpRight, FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi"
 import { useSelector } from "react-redux"
+import logo from '../../assets/logo.png'
 
 export default function Footer() {
-    const bgcolor = useSelector((state) => state.theme.navbar)
-    const txtcolor = useSelector((state) => state.theme.textcolor)
+  const bgcolor = useSelector((state) => state.theme.navbar)
+  const txtcolor = useSelector((state) => state.theme.textcolor)
 
   return (
-    <footer className="w-full pt-10 pb-6" style={{backgroundColor : bgcolor , color : txtcolor}}>
+    <footer className="w-full pt-10 pb-6" style={{ backgroundColor: bgcolor, color: txtcolor }}>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Support Section */}
@@ -19,23 +20,20 @@ export default function Footer() {
 
             <div className="space-y-6">
               <div>
-                <h3 className="font-medium mb-1">Australia</h3>
-                <p className="text-sm text-gray-600">Travel World House, Level 7, 17</p>
-                <p className="text-sm text-gray-600">Jones St, NSW, 2000</p>
+                <h3 className="font-medium mb-1">India</h3>
+                <p className="text-sm">
+                  Tizzy Cloud is a team of enthusiastic techies specialized in Cloud Computing services. Since inception we are focused on educating rather just selling services.
+                </p>
+                <p className="text-sm">Jones St, NSW, 2000</p>
               </div>
 
-              <div>
-                <h3 className="font-medium mb-1">Dubai</h3>
-                <p className="text-sm text-gray-600">Sheikh Mohammed bin Salah,</p>
-                <p className="text-sm text-gray-600">#234-8 - Downtown - Dubai</p>
-              </div>
             </div>
           </div>
 
           {/* Center Button */}
           <div className="flex justify-center items-start">
-            <div className="w-16 h-16 rounded-full bg-lime-500 flex items-center justify-center cursor-pointer hover:bg-lime-600 transition-colors">
-              <FiArrowUpRight className="text-white" size={24} />
+            <div className="w-20 h-20">
+              <img src={logo} alt="" />
             </div>
           </div>
 
@@ -44,30 +42,30 @@ export default function Footer() {
             <h3 className="text-lg font-medium mb-4">Useful a</h3>
             <div className="grid grid-cols-2 gap-x-4 gap-y-2">
               <div className="space-y-2">
-                <a href="#" className="block text-gray-600 hover:text-gray-900 transition-colors">
+                <a href="#" className="block transition-colors">
                   About Us
                 </a>
-                <a href="#" className="block text-gray-600 hover:text-gray-900 transition-colors">
+                <a href="#" className="block transition-colors">
                   FAQs
                 </a>
-                <a href="#" className="block text-gray-600 hover:text-gray-900 transition-colors">
+                <a href="#" className="block transition-colors">
                   Term & Conditions
                 </a>
-                <a href="#" className="block text-gray-600 hover:text-gray-900 transition-colors">
+                <a href="#" className="block transition-colors">
                   Careers
                 </a>
               </div>
               <div className="space-y-2">
-                <a href="#" className="block text-gray-600 hover:text-gray-900 transition-colors">
+                <a href="#" className="block  transition-colors">
                   Contact
                 </a>
-                <a href="#" className="block text-gray-600 hover:text-gray-900 transition-colors">
+                <a href="#" className="block  transition-colors">
                   Services
                 </a>
-                <a href="#" className="block text-gray-600 hover:text-gray-900 transition-colors">
+                <a href="#" className="block  transition-colors">
                   Privacy Policy
                 </a>
-                <a href="#" className="block text-gray-600 hover:text-gray-900 transition-colors">
+                <a href="#" className="block  transition-colors">
                   Help Desk
                 </a>
               </div>

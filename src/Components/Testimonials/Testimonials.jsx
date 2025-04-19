@@ -52,8 +52,8 @@ export default function Testimonials() {
             <div className="max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="flex flex-col md:flex-row justify-between items-center mb-10">
-                    <h2 className="text-3xl md:text-4xl font-bold">
-                        TESTIM<span className="text-lime-500">ONIALS</span>
+                    <h2 className="text-2xl md:text-3xl font-bold">
+                    Some Awesome Words by Our Customers.
                     </h2>
                     <div className="flex items-center gap-4 mt-4 md:mt-0">
                         <div className="text-lg font-semibold bg-gray-100 rounded-full px-4 py-2 shadow text-gray-950">
