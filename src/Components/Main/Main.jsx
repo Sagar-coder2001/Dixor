@@ -54,7 +54,7 @@ export default function Main() {
         >
             {/* Left section */}
             <div className="max-w-xl text-center md:text-left space-y-8 mt-10">
-                <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-tight"
+                <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl  font-bold leading-tight"
                     style={{ color: textcolors }}>
                     {/* Animate CREATIVE */}
                     <AnimatedText text={headingText} />
