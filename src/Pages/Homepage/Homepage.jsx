@@ -17,9 +17,9 @@ const Homepage = () => {
    {/* <About/> */}
    <Features/>
    <Price/>
-   {/* <Revenue/> */}
+   <Revenue/>
    <Testimonials/>
-   {/* <Blog/> */}
+   <Blog/>
    <Faq/>
    </>
   )
